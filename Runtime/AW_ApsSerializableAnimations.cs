@@ -14,12 +14,12 @@ namespace ANGELWARE.AW_APS
     [Serializable]
     public class AW_SerializableAnimationGroup
     {
-        public SerializableOutfitAnimations[] animations;
+        public AW_SerializableAnimations[] animations;
         public string parameterName;
     }
     
     [Serializable]
-    public class SerializableOutfitAnimations
+    public class AW_SerializableAnimations
     {
         public AnimationClip animations;
         public float trigger;
