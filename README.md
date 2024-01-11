@@ -1,8 +1,6 @@
 # AW_APS
 
-## ⚠️⚠️ This is a heavy W.I.P! Features will be broken, and force pushes will be used! ⚠️⚠️
-
----
+> ⚠️⚠️ This is a heavy W.I.P! Features will be broken, and force pushes will be used! ⚠️⚠️
 
 ### Angel's Penetration System
 
