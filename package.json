@@ -1,0 +1,18 @@
+{
+  "name": "com.angelware.aps",
+  "displayName": "AW_APS",
+  "version": "0.0.1",
+  "description": "Describe this Package",
+  "gitDependencies": {},
+  "vpmDependencies": {
+    "com.vrchat.avatars": "3.5.0"
+  },
+  "author": {
+    "name": "ANGELWARE",
+    "email": "ARCHANGEL@ANGELWARE.NET",
+    "url": "https://angelware.net"
+  },
+  "legacyFolders": {},
+  "legacyFiles": {},
+  "localPath": "P:\\PACKAGING\\Packages\\com.angelware.aps"
+}

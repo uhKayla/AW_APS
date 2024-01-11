@@ -1,0 +1,23 @@
+{
+  "name": "com.angelware.aps",
+  "references": [
+    "VRC.SDK3A",
+    "VRC.SDKBase",
+    "AnimatorAsCode.V1",
+    "AnimatorAsCode.V1.ModularAvatar",
+    "AnimatorAsCode.V1.NDMFProcessor",
+    "AnimatorAsCode.V1.VRChat",
+    "nadena.dev.ndmf",
+    "nadena.dev.ndmf.runtime",
+    "com.angelware.ocs",
+    "com.angelware.aac"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "defineConstraints": [],
+  "optionalUnityReferences": []
+}
