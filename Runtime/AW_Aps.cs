@@ -59,17 +59,35 @@ namespace ANGELWARE.AW_APS
 
             var sendersObject = new GameObject("Senders");
 
+            var rootList = new List<string> { "TPS_Orf_Root", "SPSLL_Socket_Root",  };
+            
+            rootList.Add(!marker.ring ? "SPSLL_Socket_Hole" : "SPSLL_Socket_Ring");
+
+            if (marker.notOnHips)
+            {
+                rootList.Add("TPS_Orf_Root_SelfNotOnHips");
+                rootList.Add("SPSLL_Root_SelfNotOnHips");
+                rootList.Add(!marker.ring ? "SPSLL_Socket_Hole_SelfNotOnHips" : "SPSLL_Socket_Ring_SelfNotOnHips");
+            }
+
             var rootObj = new GameObject("Root");
             rootObj.transform.SetParent(sendersObject.transform);
             _sender.CreateContactSender(rootObj, rootObj.transform, 0, 0.001f,
-                Vector3.zero, Vector3.zero,
-                new List<string> { "TPS_Orf_Root", "SPSLL_Socket_Root", "SPSLL_Socket_Hole" });
+                Vector3.zero, Vector3.zero, rootList
+                );
 
+            var frontList =  new List<string> { "TPS_Orf_Norm", "SPSLL_Socket_Front" };
+            if (marker.notOnHips)
+            {
+                rootList.Add("TPS_Orf_Norm_SelfNotOnHips");
+                frontList.Add("SPSLL_Root_SelfNotOnHips");
+            }
+            
             var frontObj = new GameObject("Front");
             frontObj.transform.SetParent(sendersObject.transform);
             _sender.CreateContactSender(frontObj, frontObj.transform, 0, 0.001f,
-                new Vector3(0, 0, 0.01f), Vector3.zero,
-                new List<string> { "TPS_Orf_Norm", "SPSLL_Socket_Front" });
+                new Vector3(0, 0, 0.01f), Vector3.zero, frontList
+                );
 
             return sendersObject;
         }
@@ -139,16 +157,32 @@ namespace ANGELWARE.AW_APS
         {
             var lightsRoot = new GameObject("Lights");
 
-            var rootLight = new GameObject("Root");
-            rootLight.transform.SetParent(lightsRoot.transform);
-            var light = rootLight.AddComponent<Light>();
-            light.type = LightType.Point;
-            light.range = 0.4102f;
-            light.color = Color.black;
-            light.lightmapBakeType = LightmapBakeType.Realtime;
-            light.intensity = 1f;
-            light.shadows = LightShadows.None;
-            light.renderMode = LightRenderMode.ForceVertex;
+            if (!holeMarker.ring)
+            {
+                var rootLight = new GameObject("Root");
+                rootLight.transform.SetParent(lightsRoot.transform);
+                var light = rootLight.AddComponent<Light>();
+                light.type = LightType.Point;
+                light.range = 0.4102f;
+                light.color = Color.black;
+                light.lightmapBakeType = LightmapBakeType.Realtime;
+                light.intensity = 1f;
+                light.shadows = LightShadows.None;
+                light.renderMode = LightRenderMode.ForceVertex;
+            }
+            else
+            {
+                var rootLight = new GameObject("Root");
+                rootLight.transform.SetParent(lightsRoot.transform);
+                var light = rootLight.AddComponent<Light>();
+                light.type = LightType.Point;
+                light.range = 0.4202f;
+                light.color = Color.black;
+                light.lightmapBakeType = LightmapBakeType.Realtime;
+                light.intensity = 1f;
+                light.shadows = LightShadows.None;
+                light.renderMode = LightRenderMode.ForceVertex;
+            }
             
             var frontLight = new GameObject("Front");
             frontLight.transform.localPosition = new Vector3(0, 0, 0.01f);

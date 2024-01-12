@@ -7,16 +7,14 @@ namespace ANGELWARE.AW_APS
 {
     [AddComponentMenu("ANGELWARE/APS/Hole Marker")]
     [HelpURL("https://angelware.info/aps/holes/")]
-    public class AW_ApsHoleMarker : MonoBehaviour, IEditorOnly
+    public class AW_ApsRingMarker : MonoBehaviour, IEditorOnly
     {
         public Transform root;
         public string tag;
-        public float depth;
         public bool haptics;
         public bool selfInteract;
         public bool autoMode;
         public bool notOnHips;
-        public bool ring;
         private Color color;
         public Transform rootTransform;
         
