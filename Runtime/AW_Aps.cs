@@ -6,18 +6,18 @@ using nadena.dev.ndmf;
 using UnityEngine;
 using VRC.SDKBase;
 
-[assembly: ExportsPlugin(typeof(AW_ApsHolePlugin))]
+[assembly: ExportsPlugin(typeof(AW_ApsPlugin))]
 
 namespace ANGELWARE.AW_APS
 {
-    [AddComponentMenu("ANGELWARE/APS/Hole")]
+    [AddComponentMenu("ANGELWARE/APS/APS Manager")]
     public class AW_Aps : MonoBehaviour, IEditorOnly
     {
         public Transform root;
         public List<AW_ApsHoleMarker> markers;
     }
 
-    public class AW_ApsHolePlugin : AacPlugin<AW_Aps>
+    public class AW_ApsPlugin : AacPlugin<AW_Aps>
     {
         private AW_ContactReceiver _receiver;
         private AW_ContactSender _sender;

@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -24,7 +25,13 @@ namespace ANGELWARE.AW_APS.Editor
         protected override void SetupContent(VisualElement root)
         {
             base.SetupContent(root);
+
+            var text = new Label(
+                "This component is meant to be added to the root of the avatar, and handles the finding and construction of all holes. This is for improved performance, as opposed to baking each hole one-by-one.");
+            
             var container = root.Q<VisualElement>("Container");
+            
+            container.Add(text);
 
             foreach (var marker in _markers)
             {

@@ -6,7 +6,7 @@ using VRC.SDKBase;
 namespace ANGELWARE.AW_APS
 {
     [AddComponentMenu("ANGELWARE/APS/Hole Marker")]
-    [HelpURL("https://angelware.info/aps/holes/")]
+    [HelpURL("")]
     public class AW_ApsRingMarker : MonoBehaviour, IEditorOnly
     {
         public Transform root;
