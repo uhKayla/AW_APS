@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+Ausing ANGELWARE.AW_AAC.Plugin;
 using ANGELWARE.AW_APS;
 using ANGELWARE.AW_OCS;
 using AnimatorAsCode.V1.NDMFProcessor;
@@ -17,12 +18,12 @@ namespace ANGELWARE.AW_APS
         public List<AW_ApsHoleMarker> markers;
     }
 
-    public class AW_ApsPlugin : AacPlugin<AW_Aps>
+    public class AW_ApsPlugin : ApsMergerPlugin<AW_Aps>
     {
         private AW_ContactReceiver _receiver;
         private AW_ContactSender _sender;
 
-        protected override AacPluginOutput Execute()
+        protected override ApsMergerPluginOutput Execute()
         {
             var root = my.root.transform;
             var markers = root.GetComponentsInChildren<AW_ApsHoleMarker>();
@@ -50,7 +51,7 @@ namespace ANGELWARE.AW_APS
                 animations.transform.SetParent(transform, false);
             }
             
-            return AacPluginOutput.Regular();
+            return ApsMergerPluginOutput.Regular();
         }
 
         private GameObject CreateSenders(AW_ApsHoleMarker marker)

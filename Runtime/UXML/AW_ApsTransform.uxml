@@ -1,8 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
     <uie:Toolbar>
-        <ui:TextField picking-mode="Ignore" value="Hole Name" name="HoleName" style="flex-grow: 1; max-width: none;" />
-        <uie:ToolbarSpacer style="flex-grow: initial; border-left-width: 1px; border-right-width: 1px; border-top-width: 0; border-bottom-width: 0; border-left-color: rgba(0, 0, 0, 0.2); border-right-color: rgba(0, 0, 0, 0.2); border-top-color: rgba(0, 0, 0, 0.2); border-bottom-color: rgba(0, 0, 0, 0.2); width: auto; min-width: 60px;" />
-        <uie:ObjectField label="Bone to Attach" name="Bone" type="UnityEngine.Transform, UnityEngine.CoreModule" style="flex-grow: 1; justify-content: center; align-self: stretch; flex-direction: row;" />
-        <uie:ToolbarButton text="Select" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectButton" style="flex-grow: 1; -unity-text-align: upper-center;" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="HoleName" style="flex-grow: 1;" />
+        <uie:ToolbarSpacer style="flex-grow: 1; border-left-width: 1px; border-right-width: 1px; border-top-width: 0; border-bottom-width: 0; border-left-color: rgba(0, 0, 0, 0.2); border-right-color: rgba(0, 0, 0, 0.2); border-top-color: rgba(0, 0, 0, 0.2); border-bottom-color: rgba(0, 0, 0, 0.2); width: auto; min-width: 60px;" />
+        <uie:ToolbarButton text="Select" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectButton" style="flex-grow: 0; -unity-text-align: upper-center;" />
     </uie:Toolbar>
 </ui:UXML>
