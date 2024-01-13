@@ -5,7 +5,8 @@
   "description": "Describe this Package",
   "gitDependencies": {},
   "vpmDependencies": {
-    "com.vrchat.avatars": "3.5.0"
+    "com.vrchat.avatars": "3.5.0",
+    "nadena.dev.ndmf": "1.2.5"
   },
   "author": {
     "name": "ANGELWARE",
