@@ -30,9 +30,10 @@ namespace ANGELWARE.AW_APS
 
             if (_gizmoMesh != null)
             {
+                var transformG = transform;
                 color = new Color(231, 64, 67);
                 Gizmos.color = color;
-                Gizmos.DrawMesh(_gizmoMesh, transform.position, transform.rotation, new Vector3(0.15f,0.15f,0.15f));
+                Gizmos.DrawMesh(_gizmoMesh, transformG.position, transformG.rotation, new Vector3(0.15f,0.15f,0.15f));
             }
         } 
     }
