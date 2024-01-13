@@ -17,8 +17,6 @@ namespace ANGELWARE.AW_AAC.Plugin
     /// https://github.com/hai-vr/animator-as-code-ndmf-processor/blob/main/Packages/dev.hai-vr.animator-as-code.v1.ndmf-processor/V1/Editor/AacPlugin.cs
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    [AddComponentMenu("ANGELWARE/AAC/ApsMergerPlugin")]
-
     public class ApsMergerPlugin<T> : Plugin<ApsMergerPlugin<T>> where T : MonoBehaviour
     {
         // Can be changed if necessary

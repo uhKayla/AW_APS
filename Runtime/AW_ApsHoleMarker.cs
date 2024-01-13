@@ -1,4 +1,4 @@
-﻿using System;
+﻿#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 using VRC.SDKBase;
@@ -17,7 +17,6 @@ namespace ANGELWARE.AW_APS
         public bool notOnHips;
         public bool ring;
         private Color color;
-        public Transform rootTransform;
         
         private Mesh _gizmoMesh;
 
@@ -35,6 +34,12 @@ namespace ANGELWARE.AW_APS
                 Gizmos.color = color;
                 Gizmos.DrawMesh(_gizmoMesh, transform.position, transform.rotation, new Vector3(0.15f,0.15f,0.15f));
             }
-        } 
+        }
+
+        private void OnEnable()
+        {
+            root = this.transform;
+        }
     }
 }
+#endif

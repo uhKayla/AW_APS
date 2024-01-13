@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,3 +79,4 @@ namespace ANGELWARE.AW_APS.Editor
         }
     }
 }
+#endif

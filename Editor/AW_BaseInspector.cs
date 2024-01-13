@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEngine.UIElements;
 
 namespace ANGELWARE.AW_APS.Editor
@@ -22,3 +23,4 @@ namespace ANGELWARE.AW_APS.Editor
         }
     }
 }
+#endif
