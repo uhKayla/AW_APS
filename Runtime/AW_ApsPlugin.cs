@@ -15,10 +15,12 @@ namespace ANGELWARE.AW_APS
         private AW_ContactReceiver _receiver;
         private AW_ContactSender _sender;
         private AW_Aps _apsComponent;
+        
+        public override string QualifiedName => "AW.APS";
 
         protected override void Configure()
         {
-            InPhase(BuildPhase.Transforming).Run("Build Holes", ctx =>
+            InPhase(BuildPhase.Transforming).Run("AW_APS Build Holes", ctx =>
             {
                 _apsComponent = Object.FindObjectOfType<AW_Aps>();
                 var root = _apsComponent.transform;
