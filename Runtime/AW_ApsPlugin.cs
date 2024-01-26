@@ -23,6 +23,7 @@ namespace ANGELWARE.AW_APS
             InPhase(BuildPhase.Transforming).Run("AW_APS Build Holes", ctx =>
             {
                 _apsComponent = Object.FindObjectOfType<AW_Aps>();
+                if (_apsComponent == null) return;
                 var root = _apsComponent.transform;
                 var markers = root.GetComponentsInChildren<AW_ApsHoleMarker>();
 
