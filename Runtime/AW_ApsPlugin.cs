@@ -213,12 +213,19 @@ namespace ANGELWARE.AW_APS
                 Vector3.zero, new List<string> { "TPS_Pen_Penetrating" }, true,
                 true, false, 2, $"NSFW/Input/{holeMarker.tag}/Max");
 
-            var receiverEntrance = new GameObject("AnimMax");
+            var receiverEntrance = new GameObject("AnimEntrance");
             receiverEntrance.transform.SetParent(auto.transform);
 
             _receiver.CreateContactReceiver(receiverEntrance, receiverEntrance.transform, 0, 0.02f, 0, Vector3.zero,
                 Vector3.zero, new List<string> { "TPS_Pen_Penetrating" }, true,
                 true, false, 2, $"NSFW/Input/{holeMarker.tag}/Entrance");
+            
+            var receiverEntranceNormal = new GameObject("AnimNormal");
+            receiverEntranceNormal.transform.SetParent(auto.transform);
+
+            _receiver.CreateContactReceiver(receiverEntranceNormal, receiverEntranceNormal.transform, 0, 0.02f, 0, Vector3.zero,
+                Vector3.zero, new List<string> { "TPS_Pen_Penetrating" }, true,
+                true, false, 2, $"NSFW/Input/Normal");
 
             return auto;
         }
