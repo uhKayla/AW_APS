@@ -159,7 +159,7 @@ namespace ANGELWARE.AW_APS
 
             if (!holeMarker.ring)
             {
-                var rootLight = new GameObject("Root");
+                var rootLight = new GameObject("RootA");
                 rootLight.transform.SetParent(lightsRoot.transform);
                 var light = rootLight.AddComponent<Light>();
                 light.type = LightType.Point;
@@ -172,7 +172,7 @@ namespace ANGELWARE.AW_APS
             }
             else
             {
-                var rootLight = new GameObject("Root");
+                var rootLight = new GameObject("RootA");
                 rootLight.transform.SetParent(lightsRoot.transform);
                 var light = rootLight.AddComponent<Light>();
                 light.type = LightType.Point;
@@ -184,7 +184,7 @@ namespace ANGELWARE.AW_APS
                 light.renderMode = LightRenderMode.ForceVertex;
             }
 
-            var frontLight = new GameObject("Front");
+            var frontLight = new GameObject("FrontA");
             frontLight.transform.localPosition = new Vector3(0, 0, 0.01f);
             frontLight.transform.SetParent(lightsRoot.transform);
             var lightFront = frontLight.AddComponent<Light>();
