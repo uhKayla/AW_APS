@@ -19,7 +19,7 @@ namespace ANGELWARE.AW_APS
 
         protected override void Configure()
         {
-            InPhase(BuildPhase.Transforming).Run("AW_APS Build Holes", ctx =>
+            InPhase(BuildPhase.Transforming).Run("AW_APS Penetrator Setup", ctx =>
             {
                 _apsPenComponent = Object.FindObjectOfType<AW_ApsPenetratorComponent>();
                 
